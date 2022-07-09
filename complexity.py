@@ -1,3 +1,7 @@
+import nltk 
+import numpy as np
+import string 
+
 def complexity(texts): 
     return np.array([[mean(len(w) for w in wt), len(set(wt)) / len(wt), st, len([w for w in wt if len(w) >= 6]) * 1.0 / len(wt)] for st, wt in 
             zip(
